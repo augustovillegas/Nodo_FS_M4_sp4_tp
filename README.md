@@ -22,5 +22,5 @@ npm run dev
 ```
 
 ## Deploy
-Se puede desplegar en Vercel o Netlify ejecutando el build con los mismos scripts de Vite. Agrega aquí el enlace público una vez publicado.
+> Vistar el sitio en el siguiente link: **`https://buscador-personajes.netlify.app/`**
 
