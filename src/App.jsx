@@ -79,7 +79,7 @@ export default function App() {
       }}
     >
       <motion.div
-        className="absolute inset-0 bg-[radial-gradient(circle_at_center,#00FF9C33,#00000000_60%)]"
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,#00FF9C33,#00000000_60%)]"
         animate={{
           backgroundPosition: ["0% 0%", "100% 100%"],
         }}
@@ -157,14 +157,43 @@ export default function App() {
           whileHover={{ x: -6 }}
           whileTap={{ scale: 0.97 }}
           onClick={() => setShowFavorites(true)}
-          className="fixed top-1/2 right-0 z-30 flex -translate-y-1/2 items-center gap-3 rounded-l-full border-2 border-[#7B2CBF]/60 bg-[#1B2735]/95 px-5 py-3 font-bold tracking-wide text-[#F7FF00] shadow-[0_0_20px_#7B2CBF88] backdrop-blur-md"
+          className="fixed top-1/2 right-0 z-30 flex -translate-y-1/2 items-center gap-2 rounded-l-full border-2 border-[#7B2CBF]/60 bg-[#1B2735]/95 px-3 py-2 text-xs font-bold tracking-wide text-[#F7FF00] shadow-[0_0_20px_#7B2CBF88] backdrop-blur-md sm:gap-3 sm:px-5 sm:py-3 sm:text-sm md:text-base"
         >
           Ver favoritos ({favorites.length})
         </motion.button>
       )}
 
-      <footer className="border-t border-[#00FF9C]/20 py-6 text-center text-[#00FF9C]/70">
-        <p>Hecho con portales, React y mucho caos interdimensional Wubba Lubba Dub-Dub!</p>
+      <footer className="border-t border-[#00FF9C]/20 py-6 text-[#00FF9C]/70">
+        <div className="mx-auto flex w-full max-w-6xl flex-col items-center gap-3 px-6 text-center">
+          <p>
+            Hecho con portales, React y mucho caos interdimensional Wubba Lubba Dub-Dub!
+          </p>
+          <div className="flex justify-center">
+            <div className="flex flex-wrap items-center justify-center gap-3 text-sm">
+              <span className="uppercase tracking-[0.2em] text-[#00FF9C]/70">
+                Programmed by
+              </span>
+              <span className="h-1 w-1 rounded-full bg-[#00FF9C]/50" aria-hidden="true" />
+              <a
+                href="https://www.linkedin.com/in/augustovillegas/"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 rounded-full border border-[#00FF9C]/40 px-4 py-2 text-[#F7FF00] transition hover:border-[#00FF9C]/80 hover:bg-[#00FF9C]/10"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  className="h-5 w-5 text-[#00FF9C]"
+                  aria-hidden="true"
+                >
+                  <path d="M4.98 3.5A2.5 2.5 0 1 0 5 8.5a2.5 2.5 0 0 0-.02-5zM3 9h4v12H3V9zm7 0h3.8v1.7h.1c.5-1 1.8-2 3.7-2 4 0 4.7 2.6 4.7 6V21h-4v-5.2c0-1.2 0-2.8-1.7-2.8-1.8 0-2 1.3-2 2.7V21h-4V9z" />
+                </svg>
+                LinkedIn
+              </a>
+            </div>
+          </div>
+        </div>
       </footer>
       <ToastContainer position="bottom-right" theme="dark" />
     </div>
