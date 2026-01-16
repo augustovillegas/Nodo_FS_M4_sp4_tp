@@ -293,7 +293,7 @@ Las contribuciones son bienvenidas. Si deseas colaborar:
 
 ## 📄 Licencia
 
-Pendiente de definir. Se recomienda agregar una licencia explícita (por ejemplo, MIT) antes de publicar el repositorio.
+MIT
 
 ---
 
